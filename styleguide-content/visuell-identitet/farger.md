@@ -148,6 +148,41 @@
             <div>#FFFFFF<br/>@ffe-white</div>
         </li>
     </ul>
+    <h4 class="ffe-h4">Mørk modus</h4>
+    <ul class="sb1ds-color-palette">
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-azure-darkmode">
+            <div>Hovedblå</div>
+            <div>#0A91FF<br/>@ffe-blue-azure-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-black-darkmode">
+            <div>Sort</div>
+            <div>#000000<br/>@ffe-black-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-charcoal-darkmode">
+            <div>Koksgrå</div>
+            <div>#1C1C1C<br/>@ffe-grey-charcoal-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-darkmode">
+            <div>Grå</div>
+            <div>#292929<br/>@ffe-grey-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-silver-darkmode">
+            <div>Sølvgrå</div>
+            <div>#858585<br/>@ffe-grey-silver-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-cloud-darkmode">
+            <div>Skygrå</div>
+            <div>#ADADAD<br/>@ffe-grey-cloud-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-white-darkmode">
+            <div>Hvit</div>
+            <div>#FFFFFF<br/>@ffe-white-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-red-darkmode">
+            <div>Rød</div>
+            <div>#FF2424<br/>@ffe-red-darkmode</div>
+        </li>
+    </ul>
 <!-- ### Deprecated
 <ul class="sb1ds-color-palette">
     <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-deep-sky">
