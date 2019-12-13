@@ -55,6 +55,14 @@ checkbox.addEventListener('change', function() {
     }
 });
 
+var dmButton = document.querySelector('button.darkmode-button');
+
+dmButton.addEventListener('keydown', function(e) {
+    if (e.keyCode === 32 || e.keyCode === 13) {
+        checkbox.click();
+    }
+});
+
 var mediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 mediaQueryList.addEventListener('change', () => {
     var darkModeEndabledByOS = window.matchMedia('(prefers-color-scheme: dark)')

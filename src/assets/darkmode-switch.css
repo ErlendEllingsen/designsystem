@@ -1,4 +1,4 @@
-li.darkmode {
+#darkmode-switch-list-item {
     display: flex;
 }
 
@@ -7,6 +7,14 @@ li.darkmode {
     height: 0;
     width: 0;
     margin-bottom: 40px;
+}
+
+button.darkmode-button {
+    display: flex;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
 }
 
 .darkmode-switch-icon {
