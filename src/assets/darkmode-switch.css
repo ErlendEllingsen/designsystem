@@ -22,9 +22,14 @@ li.darkmode {
     text-indent: -9999px;
     width: 55px;
     height: 30px;
-    background: #999;
+    background: #adadad;
     float: right;
     margin-top: 14px;
+}
+
+#switch-label:active,
+#switch-label:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
 }
 
 #switch-label::after {
@@ -40,7 +45,7 @@ li.darkmode {
 }
 
 #darkmode-switch:checked + label {
-    background: #484;
+    background: #008a00;
 }
 
 #darkmode-switch:checked + label::after {
