@@ -22,6 +22,12 @@ function onLightModeSelected() {
     });
 }
 
+function setCookie(darkmodeEnabled) {
+    var date = new Date();
+    date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+    document.cookie = `sb1design-darkmode=${darkmodeEnabled}; expires=${date.toGMTString()}`;
+}
+
 var checkbox = document.getElementById('darkmode-switch');
 
 let animateCssTransition = () => {
@@ -44,14 +50,26 @@ checkbox.addEventListener('change', function() {
         darkModeEnabled = true;
         animateCssTransition();
         onDarkModeSelected();
-        document.querySelector("link[href='styles.css']").href =
-            'styles-darkmode.css';
+        document.querySelector("link[href*='styles.css']").href =
+            './styleguidist/styles-darkmode.css';
+        setCookie(true);
     } else {
         darkModeEnabled = false;
         animateCssTransition();
         onLightModeSelected();
-        document.querySelector("link[href='styles-darkmode.css']").href =
-            'styles.css';
+        document.querySelector("link[href*='styles-darkmode.css']").href =
+            './styleguidist/styles.css';
+        setCookie(false);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    if (
+        document.cookie.split(';').filter(function(c) {
+            return c.startsWith('sb1design-darkmode=true');
+        }).length > 0
+    ) {
+        checkbox.click();
     }
 });
 

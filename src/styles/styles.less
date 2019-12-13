@@ -221,6 +221,11 @@ body {
     margin-top: 20px;
     flex-shrink: 0;
 
+    @media (prefers-color-scheme: dark) {
+        background-color: @ffe-grey-darkmode;
+        color: @ffe-white;
+    }
+
     &__link {
         display: flex;
     }
