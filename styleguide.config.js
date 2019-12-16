@@ -171,10 +171,12 @@ module.exports = {
                 PRODUCTION
                     ? '<li class="sb1ds-top-menu__item" id="darkmode-switch-list-item">\n' +
                           '<button class="darkmode-button">\n' +
+                          '<span class="darkmode-button-content" tabindex="-1">\n' +
                           '<img src="./assets/light-mode-icon.svg" class="darkmode-switch-icon" alt="Deaktivèr darkmode"/>\n' +
                           '<input class="container_toggle" type="checkbox" id="darkmode-switch">\n' +
                           '<label for="darkmode-switch" id="switch-label" title="Aktivèr darkmode!"></label>\n' +
                           '<img src="./assets/dark-mode-icon.svg" class="darkmode-switch-icon" alt="Aktivèr darkmode"/>\n' +
+                          '</span>\n' +
                           '</button>\n' +
                           '</li>'
                     : '',

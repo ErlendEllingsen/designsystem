@@ -674,7 +674,6 @@
             </td>
         </tr>
     </table>
-    
     <h3 class="ffe-h3">Mørk modus</h4>
     <h4 class="ffe-h4">Vekting</h4>
     <div class="sb1ds-color-usage__illustration">
