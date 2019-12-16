@@ -118,13 +118,69 @@ module.exports = {
                                   },
                               },
                               'postcss-loader',
-                              'less-loader',
+                              {
+                                  loader: 'less-loader',
+                                  options: {
+                                      plugins: [
+                                          {
+                                              // We add a pre-processor to the less-loader so that we can replace dark mode
+                                              // media query with something we can activate in-browser.
+                                              install: (
+                                                  lessObj,
+                                                  pluginManager,
+                                              ) => {
+                                                  pluginManager.addPreProcessor(
+                                                      {
+                                                          process: function(
+                                                              lessCode,
+                                                          ) {
+                                                              return lessCode.replace(
+                                                                  /@media\s?\(prefers-color-scheme:\s?dark\)/gi,
+                                                                  '#sb1-designsystem-darkmode',
+                                                              );
+                                                          },
+                                                      },
+                                                      2000,
+                                                  );
+                                              },
+                                          },
+                                      ],
+                                  },
+                              },
                           ]
                         : [
                               'style-loader',
                               'css-loader',
                               'postcss-loader',
-                              'less-loader',
+                              {
+                                  loader: 'less-loader',
+                                  options: {
+                                      plugins: [
+                                          {
+                                              // We add a pre-processor to the less-loader so that we can replace dark mode
+                                              // media query with something we can activate in-browser.
+                                              install: (
+                                                  lessObj,
+                                                  pluginManager,
+                                              ) => {
+                                                  pluginManager.addPreProcessor(
+                                                      {
+                                                          process: function(
+                                                              lessCode,
+                                                          ) {
+                                                              return lessCode.replace(
+                                                                  /@media\s?\(prefers-color-scheme:\s?dark\)/gi,
+                                                                  '#sb1-designsystem-darkmode',
+                                                              );
+                                                          },
+                                                      },
+                                                      2000,
+                                                  );
+                                              },
+                                          },
+                                      ],
+                                  },
+                              },
                           ],
                     exclude: /node_modules/,
                 },

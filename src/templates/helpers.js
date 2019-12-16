@@ -10,7 +10,3 @@ Handlebars.registerHelper('preformat', obj => {
 });
 
 Handlebars.registerHelper('eq', (a, b) => a == b); // eslint-disable-line eqeqeq
-
-Handlebars.registerHelper('productionEnv', () => {
-    return process.env.NODE_ENV === 'production';
-});

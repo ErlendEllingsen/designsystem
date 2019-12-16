@@ -9,6 +9,9 @@ function isDarkModeSupported() {
 }
 
 function onDarkModeSelected() {
+    document
+        .getElementsByClassName('sb1-designsystem-darkmode-container')[0]
+        .setAttribute('id', 'sb1-designsystem-darkmode');
     document.body.classList.add('native');
     document.querySelectorAll('.darkmode-switch-icon').forEach(icon => {
         icon.style.filter = 'invert(100%)';
@@ -16,6 +19,9 @@ function onDarkModeSelected() {
 }
 
 function onLightModeSelected() {
+    document
+        .getElementsByClassName('sb1-designsystem-darkmode-container')[0]
+        .removeAttribute('id', 'sb1-designsystem-darkmode');
     document.body.classList.remove('native');
     document.querySelectorAll('.darkmode-switch-icon').forEach(icon => {
         icon.style.filter = '';
@@ -25,7 +31,7 @@ function onLightModeSelected() {
 function setCookie(darkmodeEnabled) {
     var date = new Date();
     date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
-    document.cookie = `sb1design-darkmode=${darkmodeEnabled}; expires=${date.toGMTString()}`;
+    document.cookie = `sb1design-darkmode=${darkmodeEnabled}; expires=${date.toGMTString()}; path=/`;
 }
 
 var checkbox = document.getElementById('darkmode-switch');
@@ -50,15 +56,11 @@ checkbox.addEventListener('change', function() {
         darkModeEnabled = true;
         animateCssTransition();
         onDarkModeSelected();
-        document.querySelector("link[href*='styles.css']").href =
-            './styleguidist/styles-darkmode.css';
         setCookie(true);
     } else {
         darkModeEnabled = false;
         animateCssTransition();
         onLightModeSelected();
-        document.querySelector("link[href*='styles-darkmode.css']").href =
-            './styleguidist/styles.css';
         setCookie(false);
     }
 });
