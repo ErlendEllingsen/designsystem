@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="/ffe.css">
   <link rel="stylesheet" id="stylelink" href="/styleguidist/styles.css">
   <link rel="shortcut icon" href="/assets/favicon.ico">
+  {{#if (productionEnv) }}
+  <link href="/assets/darkmode-switch.css" rel="stylesheet">
+  {{/if}}
 </head>
 
 <body>
@@ -37,5 +40,8 @@
   </div>
 
   <script src="/assets/sds.js"></script>
+  {{#if (productionEnv) }}
+  <script src="/assets/darkmode-switch.js"></script>
+  {{/if}}
 </body>
 </html>
