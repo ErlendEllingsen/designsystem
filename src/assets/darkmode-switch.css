@@ -17,6 +17,19 @@ button.darkmode-button {
     background-color: transparent;
 }
 
+.darkmode-button-content {
+    display: flex;
+}
+
+button.darkmode-button:focus,
+.darkmode-button-content:focus {
+    outline: none;
+}
+
+button.darkmode-button:focus > .darkmode-button-content {
+    outline: #5e9ed6 auto 5px;
+}
+
 .darkmode-switch-icon {
     margin: 14px 10px;
     height: 30px;
